@@ -21,7 +21,35 @@ public class FormularioDoc extends javax.swing.JFrame {
     public FormularioDoc() {
         initComponents();
     }
-
+// captura los dato de la base de datos y los guarda en una lista
+    /*public List listar() {
+        Connection dbconn = DBConnection.connectionDB();
+     List<cliente> lista = new ArrayList<>();
+        if(dbconn != null){
+        try {
+            PreparedStatement st = (PreparedStatement)
+            dbconn.prepareStatement("SELECT * FROM cliente");
+            ResultSet res = st.executeQuery();
+            while(res.next()){
+                cliente c = new cliente();
+                c.setId(res.getInt(1));
+                c.setDni(res.getString(2));
+                c.setNombre(res.getString(3));
+                c.setDirecion(res.getString(4));
+                c.setEstado(res.getString(5));
+                lista.add(c);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(clienteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            DBConnection.closeConnection(dbconn); // Cerrar la conexión después de usarla
+        }
+        }else{
+            System.out.println("la conexion no esta disponibles en LISTA ");
+        }
+       return lista;
+    }*/
     void CargarTabla(String valor){
         String sSQL="";
         modelo=new DefaultTableModel(null,titulos);

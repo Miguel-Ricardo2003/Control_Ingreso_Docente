@@ -167,9 +167,9 @@ public class IniciarSesion extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_usuarioActionPerformed
 
     private void btn_iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarSesionActionPerformed
-        FormularioDoc ve = new FormularioDoc();
+        frm_home ve = new frm_home();
         ve.setVisible(true);
-        this.dispose();
+        dispose();
     }//GEN-LAST:event_btn_iniciarSesionActionPerformed
 
     /**
