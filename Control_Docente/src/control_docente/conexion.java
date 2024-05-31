@@ -13,7 +13,7 @@ public class conexion {
             conectar=DriverManager.getConnection("jdbc:mysql://localhost:3306/bd_Control_Ingreso","root","");
             JOptionPane.showMessageDialog(null,"Conexión Exitosa", "Conexión", JOptionPane.INFORMATION_MESSAGE);
         }catch(ClassNotFoundException | SQLException e){
-            JOptionPane.showMessageDialog(null,"Conexión Faliida"+ e, "Conexión", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Conexión Fallida"+ e, "Conexión", JOptionPane.ERROR_MESSAGE);
         }
         return conectar;
     }

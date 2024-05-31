@@ -1,7 +1,14 @@
 
 package control_docente;
 
-//import java.awt.Dimension;
+import java.sql.*;
+import java.util.*;
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+
+
+import java.sql.Connection;
+
 
 
  
@@ -167,14 +174,42 @@ public class IniciarSesion extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_usuarioActionPerformed
 
     private void btn_iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_iniciarSesionActionPerformed
-        frm_home ve = new frm_home();
-        ve.setVisible(true);
-        dispose();
+         conexion mysql = new conexion();
+    Connection cn = mysql.conectar();
+    String usuario = txt_usuario.getText(); // Obtener el nombre de usuario del campo de texto
+    String contrasena = new String(txt_contraseña.getPassword()); // Obtener la contraseña del campo de texto
+
+    // Consulta parametrizada
+    String sSQL = "SELECT * FROM usuario WHERE n_usuario = ? AND contraseña = ?";
+    
+    try {
+        PreparedStatement pst = cn.prepareStatement(sSQL);
+        pst.setString(1, usuario);
+        pst.setString(2, contrasena);
+        ResultSet rs = pst.executeQuery();
+
+        if (rs.next()) { // Si se encuentra un usuario con el nombre de usuario y contraseña proporcionados
+            String rol = rs.getString("rol");
+            if (rol.equals("administrador")) {
+                // Abrir el archivo frm_home para el rol de administrador
+                frm_home ventanaHome = new frm_home();
+                ventanaHome.setVisible(true);
+            } else {
+                ReporteDiario rd =new ReporteDiario();
+                rd.setVisible(true);
+                dispose();
+            }
+        } else {
+            JOptionPane.showMessageDialog(null,"Credenciales incorrectas","ERROR",JOptionPane.ERROR_MESSAGE);
+        }
+    } catch (SQLException ex) {
+        // Manejar excepciones de SQL
+        ex.printStackTrace();
+    }
+             
     }//GEN-LAST:event_btn_iniciarSesionActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+  
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

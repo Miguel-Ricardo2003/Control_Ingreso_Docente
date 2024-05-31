@@ -28,7 +28,7 @@ public class frm_home extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         panelmedio1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btn_asgn_hr = new javax.swing.JButton();
         btn_creardoc1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -45,14 +45,14 @@ public class frm_home extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 153, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 51));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(242, 242, 242));
-        jButton2.setText("Crear asignaturas y horarios");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_asgn_hr.setBackground(new java.awt.Color(0, 153, 51));
+        btn_asgn_hr.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_asgn_hr.setForeground(new java.awt.Color(242, 242, 242));
+        btn_asgn_hr.setText("Crear asignaturas y horarios");
+        btn_asgn_hr.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_asgn_hr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_asgn_hrActionPerformed(evt);
             }
         });
 
@@ -84,7 +84,7 @@ public class frm_home extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addComponent(btn_creardoc1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_asgn_hr, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
@@ -100,7 +100,7 @@ public class frm_home extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelmedio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_asgn_hr, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_creardoc1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(26, Short.MAX_VALUE))
@@ -148,9 +148,11 @@ public class frm_home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btn_asgn_hrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_asgn_hrActionPerformed
+        Frm_Asig form = new Frm_Asig();
+        form.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btn_asgn_hrActionPerformed
 
     private void btn_creardoc1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_creardoc1ActionPerformed
         dispose();
@@ -194,8 +196,8 @@ public class frm_home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_asgn_hr;
     private javax.swing.JButton btn_creardoc1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
