@@ -16,7 +16,7 @@ public class FormularioDoc extends javax.swing.JFrame {
     String[] datos=new String[8];
     
     
-    hollaaa
+    
     
     public FormularioDoc() {
         initComponents();
