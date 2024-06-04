@@ -114,6 +114,7 @@ public class FormularioDoc extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 204, 51));
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 51));
+        jPanel1.setToolTipText("");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 

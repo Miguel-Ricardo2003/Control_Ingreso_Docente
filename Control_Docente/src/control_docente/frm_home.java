@@ -88,10 +88,10 @@ public class frm_home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(59, 59, 59))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelmedio1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelmedio1Layout.createSequentialGroup()
+                .addGap(336, 336, 336)
                 .addComponent(jLabel4)
-                .addGap(339, 339, 339))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelmedio1Layout.setVerticalGroup(
             panelmedio1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
